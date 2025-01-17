@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020"
+    tools:context=".app.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#F5F5F7"
+
+
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/headNav"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#FAFAFA"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/f1logo"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="f1logo"
+                        android:src="@drawable/f1_logo__1_"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginHorizontal="24dp" />
+
+                    <TextView
+                        android:id="@+id/headStandings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="Standings"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/f1logo"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/linebreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DAD7D7"
+                    app:layout_constraintTop_toBottomOf="@id/headNav"
+                    />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:background="@drawable/img_profile_bg"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                <ImageButton-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    android:id="@+id/buttonClose"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:background="@drawable/selector_button_background_borderless"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/ic_close" />-->
+
+<!--                <Button-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:id="@+id/buttonViewPortfolio"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/selector_button_background_borderless"-->
+<!--                    android:drawableStart="@drawable/ic_portfolio"-->
+<!--                    android:drawablePadding="8dp"-->
+<!--                    android:minWidth="0dp"-->
+<!--                    android:minHeight="0dp"-->
+<!--                    android:text="@string/portfolio"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16sp"-->
+<!--                    tools:layout_editor_absoluteX="288dp"-->
+<!--                    tools:layout_editor_absoluteY="16dp" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewProfile"-->
+<!--                    android:layout_width="94dp"-->
+<!--                    android:layout_height="94dp"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/img_profile"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/buttonClose"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginStart="24dp"/>-->
+<!--                <View-->
+
+<!--                    android:id="@+id/viewProfileBorder"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:background="@drawable/shape_profile_border"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/imageViewProfile"-->
+<!--                    app:layout_constraintEnd_toEndOf="@id/imageViewProfile"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/imageViewProfile"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/imageViewProfile"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewTopRated"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/shape_badge_background_yellow"-->
+<!--                    android:text="@string/top_rated"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_marginTop="14dp"-->
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/imageViewProfile"-->
+<!--                    />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewName"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:text="@string/profile_name"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="30sp"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/textViewReviewCount"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textViewTopRated" />-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textViewRating"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="@string/review_average"-->
+<!--                                    android:textColor="#FFFFFF"-->
+<!--                                    android:textSize="14sp"-->
+<!--                                    android:textStyle="bold"-->
+<!--                                    android:layout_marginEnd="4dp"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintEnd_toStartOf="@id/imageViewStar"-->
+<!--                                    app:layout_constraintBaseline_toBaselineOf="@id/textViewName"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewStar"-->
+<!--                    android:layout_width="8dp"-->
+<!--                    android:layout_height="10dp"-->
+<!--                    android:layout_marginEnd="24dp"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/ic_star"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/textViewRating"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/textViewRating" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewLocation"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    android:layout_marginTop="6dp"-->
+<!--                    android:drawableStart="@drawable/ic_location"-->
+<!--                    android:drawablePadding="4dp"-->
+<!--                    android:text="@string/profile_location"-->
+<!--                    android:textColor="@color/white_alpha_60"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/textViewReviewCount"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textViewName" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewReviewCount"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/review_count"-->
+<!--                    android:textColor="@color/white_alpha_60"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textViewRating"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    android:layout_marginEnd="24dp"-->
+<!--                    android:layout_marginTop="4dp"-->
+
+<!--                    />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewProfileDescription"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/profile_description"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginEnd="24dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewFollowerCount"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:text="@string/follower_count"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/viewFollowDivider"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textViewProfileDescription" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewFollower"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/follower"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/textViewFollowerCount"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/textViewFollowerCount"-->
+<!--                    />-->
+
+<!--                                <View-->
+<!--                                    android:id="@+id/viewFollowDivider"-->
+<!--                                    android:layout_width="1dp"-->
+<!--                                    android:layout_height="0dp"-->
+<!--                                    android:background="@color/gray"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="@id/textViewFollowerCount"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="@id/textViewFollower"-->
+<!--                                    />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewFollowingCount"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/following_count"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    android:layout_marginEnd="24dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/viewFollowDivider"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/textViewFollowerCount" />-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textViewFollowing"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="@string/following"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:layout_marginTop="4dp"-->
+<!--                                    android:textSize="12sp"-->
+<!--                                    android:textStyle="bold"-->
+<!--                                    app:layout_constraintTop_toBottomOf="@id/textViewFollowingCount"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/textViewFollowingCount"-->
+<!--                                    />-->
+
+<!--                                <androidx.constraintlayout.widget.Barrier-->
+<!--                                    android:id="@+id/barrierFollow"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    app:barrierDirection="bottom"-->
+<!--                                    app:constraint_referenced_ids="textViewFollower, textViewFollowing"-->
+<!--                                    />-->
+
+<!--                                <Button-->
+<!--                                    android:id="@+id/buttonFollow"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/selector_button_background_border_white"-->
+<!--                                    android:minHeight="0dp"-->
+<!--                                    android:text="@string/follow"-->
+<!--                                    android:textAllCaps="false"-->
+<!--                                    android:textColor="@color/selector_button_background_border_white"-->
+<!--                                    android:textSize="18sp"-->
+<!--                                    app:layout_constraintTop_toBottomOf="@id/barrierFollow"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    android:layout_marginStart="24dp"-->
+<!--                                    android:layout_marginTop="24dp"-->
+<!--                                    app:layout_constraintEnd_toStartOf="@id/guidelineProfileButton"-->
+<!--                                    android:layout_marginEnd="16dp"-->
+<!--                                    android:layout_marginBottom="24dp"-->
+
+<!--                                    />-->
+
+<!--                                <androidx.constraintlayout.widget.Guideline-->
+<!--                                    android:id="@+id/guidelineProfileButton"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:orientation="vertical"-->
+<!--                                    app:layout_constraintGuide_percent="0.4"-->
+<!--                                    />-->
+
+<!--                                <Button-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/selector_button_background_border_yellow"-->
+<!--                                    android:text="@string/contact_me"-->
+<!--                                    android:textAllCaps="false"-->
+<!--                                    android:textColor="@color/black"-->
+<!--                                    android:textSize="18sp"-->
+<!--                                    app:layout_constraintTop_toTopOf="@id/buttonFollow"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/guidelineProfileButton"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    android:layout_marginEnd="24dp"-->
+
+<!--                                    />-->
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/driversButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="48dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@drawable/selector_button_background_borderless"
+
+                    app:flow_verticalAlign="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/linebreak"
+                    tools:ignore="UsingOnClickInXml">
+
+                    <TextView
+                        android:id="@+id/drivers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:layout_margin="16dp"
+                        android:text="DRIVER"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/driversImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="drivers"
+                        android:src="@drawable/rectangle_54"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--                <EditText-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/driversButton"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/driversButton"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="4"-->
+<!--                    android:hint="2024"-->
+<!--                    />-->
+<!--                <NumberPicker-->
+<!--                    android:id="@+id/yearPicker"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+
+<!--                    app:layout_constraintTop_toBottomOf="@id/driversButton"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/driversButton"-->
+<!--                    app:layout_constraintEnd_toEndOf="@id/driversButton"-->
+
+
+<!--                    />-->
+
+
+                <TextView
+                    android:id="@+id/selectedYearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected Year"
+                    app:layout_constraintTop_toBottomOf="@id/driversButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <NumberPicker
+                    android:id="@+id/yearPickerLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    app:layout_constraintEnd_toEndOf="@id/driversButton"
+                    app:layout_constraintStart_toStartOf="@id/driversButton"
+                    app:layout_constraintTop_toBottomOf="@id/selectedYearTextView" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--        tools:listitem="@layout/view_review_item" />-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
